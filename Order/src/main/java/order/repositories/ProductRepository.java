@@ -8,4 +8,10 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
     List<Product> findAll();
+
+    /*@Query("SELECT od FROM Product od WHERE od.order= :orderId")
+    List<Product> findOrder(Long orderId);*/
+    List<Product> findByOrderId(Long orderId);
+
+    Product findQuantityByOrderId(Long productId);
 }

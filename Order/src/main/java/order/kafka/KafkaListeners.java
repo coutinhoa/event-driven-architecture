@@ -27,11 +27,11 @@ public class KafkaListeners {
     }
 
 
-   @KafkaListener(topics = "order-created", groupId = "foo1")
+   /*@KafkaListener(topics = "order-created", groupId = "foo1")
     void listenerShoppingCart(String data) throws JsonProcessingException {
         Order obj = new ObjectMapper().readValue(data, Order.class);
         log.info("data: " + data);
         log.info(("Listener received: " + obj.getOrders_details()));
         orderService.saveOrder(obj);
-    }
+    }*/
 }

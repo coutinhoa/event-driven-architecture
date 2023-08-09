@@ -1,19 +1,6 @@
 version: '3'
 
 services:
-#  user:
-#    image: 'user-project:latest'
-#    build:
-#      context: ./User/
-#    depends_on:
-#      - user-postgresql
-#    ports:
-#      - '8080:8080'
-#    environment:
-#      - SPRING_DATASOURCE_URL=jdbc:postgresql://user-postgresql:5432/user_db
-#      - SPRING_DATASOURCE_USERNAME=user
-#      - SPRING_DATASOURCE_PASSWORD=very-secure-password
-
   user-postgresql:
     image: 'bitnami/postgresql:15.3.0'
     ports:
@@ -23,18 +10,6 @@ services:
       - POSTGRESQL_PASSWORD=very-secure-password
       - POSTGRESQL_DATABASE=user_db
 
-#  order:
-#    image: 'order-project:latest'
-#    build:
-#      context: ./Order
-#    ports:
-#      - '8081:8080'
-#    depends_on:
-#      - order-postgresql
-#    environment:
-#      - SPRING_DATASOURCE_URL=jdbc:postgresql://order-postgresql:5432/order_db
-#      - SPRING_DATASOURCE_USERNAME=user
-#      - SPRING_DATASOURCE_PASSWORD=very-secure-password
 
   order-postgresql:
     image: 'bitnami/postgresql:15.3.0'
@@ -45,18 +20,6 @@ services:
       - POSTGRESQL_PASSWORD=very-secure-password
       - POSTGRESQL_DATABASE=order_db
 
-#  product:
-#    image: 'product-project:latest'
-#    build:
-#      context: ./Product
-#    ports:
-#      - '8082:8080'
-#    depends_on:
-#      - product-postgresql
-#    environment:
-#      - SPRING_DATASOURCE_URL=jdbc:postgresql://product-postgresql:5432/product_db
-#      - SPRING_DATASOURCE_USERNAME=user
-#      - SPRING_DATASOURCE_PASSWORD=very-secure-password
 
   shopping-cart-postgresql:
     image: 'bitnami/postgresql:15.3.0'
@@ -66,6 +29,15 @@ services:
       - POSTGRESQL_USERNAME=user
       - POSTGRESQL_PASSWORD=very-secure-password
       - POSTGRESQL_DATABASE=shopping_cart_db
+
+  warehouse-postgresql:
+    image: 'bitnami/postgresql:15.3.0'
+    ports:
+      - 45432:5432
+    environment:
+      - POSTGRESQL_USERNAME=user
+      - POSTGRESQL_PASSWORD=very-secure-password
+      - POSTGRESQL_DATABASE=warehouse_db
 
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
@@ -99,14 +71,3 @@ services:
     depends_on:
       - zookeeper
 
-#  nginx:
-#    image: nginx:1.25.1
-#    restart: always
-#    volumes:
-#      - ./conf.d:/etc/nginx/conf.d
-#    depends_on:
-#      - user
-#      - order
-#      - product
-#    ports:
-#      - '8080:8080'

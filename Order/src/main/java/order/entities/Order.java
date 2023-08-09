@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -24,7 +25,11 @@ public class Order implements Serializable {
     @Column(name = "total_price", nullable = false)
     private double totalPrice;
 
-    @OneToMany(mappedBy = "order")
+    @Column(name = "created_timestamp", nullable = false)
+    private LocalDateTime createdTimestamp;
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     @JsonIgnore
-    private List<OrderDetails> orders_details;
+    private List<Product> products;
+
 }

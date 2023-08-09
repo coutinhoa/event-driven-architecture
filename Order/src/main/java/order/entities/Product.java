@@ -1,12 +1,11 @@
 package order.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.io.Serializable;
-import java.util.List;
-import java.util.Set;
 
 @Data
 @ToString
@@ -19,16 +18,10 @@ public class Product implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name= "name", nullable= false)
-    @NonNull
-    private String name;
+    @Column(name = "quantity", nullable = false)
+    private int quantity;
 
-    @Column(name= "price", nullable= false)
-    private double price;
-
-    @OneToMany(mappedBy = "products")
-    @JsonIgnore
-    private List<OrderDetails> orders_details;
-
-
+    @ManyToOne
+    @JoinColumn(name="order_id", nullable = false)
+    private Order order;
 }

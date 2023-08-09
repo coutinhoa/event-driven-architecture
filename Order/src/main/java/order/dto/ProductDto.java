@@ -1,4 +1,5 @@
 package order.dto;
+
 import lombok.*;
 
 import java.io.Serializable;
@@ -13,9 +14,8 @@ public class ProductDto implements Serializable {
 
     private Long id;
 
-    @NonNull
-    private String name;
+    private int quantity;
 
-    private double price;
+    private Long orderId;
 
 }

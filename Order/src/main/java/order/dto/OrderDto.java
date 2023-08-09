@@ -3,6 +3,7 @@ package order.dto;
 import lombok.*;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Data
 @Setter
@@ -17,5 +18,7 @@ public class OrderDto implements Serializable {
     private Long userId;
 
     private double totalPrice;
+
+    private LocalDateTime createdTimestamp;
 
 }

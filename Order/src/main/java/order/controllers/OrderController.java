@@ -22,8 +22,8 @@ public class OrderController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Order>> getOrders(@RequestParam(name = "user_id", required = false, defaultValue = "") String userId) {
-        List<Order> orders = orderService.getAll(userId);
+    public ResponseEntity<List<Order>> getOrders() {
+        List<Order> orders = orderService.getAll();
         return ResponseEntity.ok(orders);
     }
 
@@ -33,5 +33,12 @@ public class OrderController {
         log.info("delete");
         orderService.deleteOrder(userId);
     }*/
+
+    @PostMapping
+    Order createOrder(@RequestBody Order newOrder){
+        System.out.println("created order");
+        return orderService.saveOrder(newOrder);
+
+    }
 
 }

@@ -1,5 +1,4 @@
 package order.dto;
-
 import lombok.*;
 
 import java.io.Serializable;
@@ -10,13 +9,14 @@ import java.io.Serializable;
 @RequiredArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class OrderDetailsDto implements Serializable {
+public class WarehouseDto implements Serializable {
 
     private Long id;
 
-    private int quantity;
+    @NonNull
+    private String name;
 
-    private Long order_id;
-    private Long product_id;
+    private double price;
+    private int warehouseQuantity;
 
 }
