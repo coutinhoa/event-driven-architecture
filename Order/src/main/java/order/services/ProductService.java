@@ -2,7 +2,6 @@ package order.services;
 
 import order.entities.Product;
 import order.repositories.ProductRepository;
-import order.repositories.WarehouseRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

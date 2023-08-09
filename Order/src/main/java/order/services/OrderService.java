@@ -3,7 +3,6 @@ package order.services;
 import order.entities.Order;
 import order.repositories.ProductRepository;
 import order.repositories.OrderRepository;
-import order.repositories.WarehouseRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
