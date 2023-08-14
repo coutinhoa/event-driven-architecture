@@ -1,6 +1,7 @@
 package shoppingCart.controllers;
 
 import org.springframework.kafka.core.KafkaTemplate;
+import shoppingCart.dto.ShoppingCartDTO;
 import shoppingCart.entities.ShoppingCart;
 import shoppingCart.services.ShoppingCartService;
 import lombok.extern.slf4j.Slf4j;
@@ -9,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @RestController
@@ -16,26 +18,33 @@ import java.util.List;
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST})
 public class ShoppingCartController {
 
-    private final ShoppingCartService service;
+    private final ShoppingCartService shoppingCartService;
     private final KafkaTemplate<String, Long> kafkaTemplate;
 
-    ShoppingCartController(KafkaTemplate<String, Long> kafkaTemplate, ShoppingCartService service) {
+    ShoppingCartController(
+            KafkaTemplate<String, Long> kafkaTemplate, ShoppingCartService shoppingCartService) {
         this.kafkaTemplate = kafkaTemplate;
-        this.service = service;
+        this.shoppingCartService = shoppingCartService;
     }
 
 
     @GetMapping
     public ResponseEntity<List<ShoppingCart>> getCart(@RequestParam(name = "name", required = false, defaultValue = "") String name) {
-        List<ShoppingCart> shoppingCart = service.getAll(name);
+        List<ShoppingCart> shoppingCart = shoppingCartService.getAll(name);
         return ResponseEntity.ok(shoppingCart);
     }
 
+    @PostMapping("/add-to-cart")
+    public ResponseEntity<String> addToCart(@RequestBody ShoppingCartDTO shoppingCartDTO) {
+        Long userId = shoppingCartDTO.getUserId();
+        Map<Long, Integer> productQuantities = shoppingCartDTO.getProductQuantities();
+        double totalPrice = calculateTotalPrice(productQuantities);
+        shoppingCartService.addToShoppingCart(userId, productQuantities, totalPrice);
 
-    @PostMapping
-    ShoppingCart newShoppingCart(@RequestBody ShoppingCart newCart) {
-        kafkaTemplate.send("order-created", newCart.getId());
-        log.info("Order sent "+ newCart.getName());
-        return service.createCart(newCart);
+        return ResponseEntity.ok("Items added to the shopping cart and sent to Kafka");
     }
+    private double calculateTotalPrice(Map<Long, Integer> productQuantities) {
+        return 10.00;
+    }
+
 }

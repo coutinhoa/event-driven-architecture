@@ -18,6 +18,7 @@ repositories {
 extra["springCloudVersion"] = "2022.0.3"
 
 dependencies {
+    implementation(project(":shopping-cart-project"))
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.flywaydb:flyway-core")

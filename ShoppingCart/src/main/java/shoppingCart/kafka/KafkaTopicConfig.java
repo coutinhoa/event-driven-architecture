@@ -10,7 +10,7 @@ public class KafkaTopicConfig {
 
     @Bean
     public NewTopic productTopic() {
-        return TopicBuilder.name("order-created")
+        return TopicBuilder.name("shopping-cart-topic")
                 .build();
     }
 

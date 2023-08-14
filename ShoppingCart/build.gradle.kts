@@ -18,6 +18,7 @@ repositories {
 extra["springCloudVersion"] = "2022.0.3"
 
 dependencies {
+    implementation ("com.fasterxml.jackson.core:jackson-databind:2.12.5")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.flywaydb:flyway-core")
@@ -59,3 +60,4 @@ dependencyManagement {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+

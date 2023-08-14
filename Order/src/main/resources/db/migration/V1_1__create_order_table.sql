@@ -1,6 +1,6 @@
 CREATE TABLE orders(
     id bigserial primary key,
-    user_id int,
+    user_id bigserial,
     total_price double precision,
     created_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

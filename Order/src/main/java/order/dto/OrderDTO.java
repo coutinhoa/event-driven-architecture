@@ -4,6 +4,7 @@ import lombok.*;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Setter
@@ -11,7 +12,7 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class OrderDto implements Serializable {
+public class OrderDTO implements Serializable {
 
     private Long id;
 
@@ -20,5 +21,5 @@ public class OrderDto implements Serializable {
     private double totalPrice;
 
     private LocalDateTime createdTimestamp;
-
+    private List<ProductDTO> products;
 }

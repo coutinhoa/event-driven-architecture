@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @ToString
 @Entity
-@Table(name = "warehouse")
+@Table(name = "products")
 @NoArgsConstructor
 public class Warehouse implements Serializable {
 

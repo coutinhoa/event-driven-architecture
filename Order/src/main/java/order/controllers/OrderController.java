@@ -1,11 +1,15 @@
 package order.controllers;
 
 import jakarta.transaction.Transactional;
+import order.dto.OrderDTO;
 import order.entities.Order;
 import order.services.OrderService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -13,10 +17,11 @@ import java.util.List;
 @Transactional
 @RestController
 @RequestMapping("/orders")
-@CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.DELETE})
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE})
 public class OrderController {
 
     private final OrderService orderService;
+    @Autowired
     OrderController(OrderService orderService) {
         this.orderService = orderService;
     }
@@ -27,18 +32,23 @@ public class OrderController {
         return ResponseEntity.ok(orders);
     }
 
-
+    //deletes all orders of user
     /*@DeleteMapping("/{userId}")
     void deleteUserById(@PathVariable Long userId) {
         log.info("delete");
         orderService.deleteOrder(userId);
     }*/
 
-    @PostMapping
-    Order createOrder(@RequestBody Order newOrder){
-        System.out.println("created order");
-        return orderService.saveOrder(newOrder);
+    //deletes one order
+    /*@DeleteMapping("/{id}")
+    void deleteOrder(@PathVariable Long id) {
+        orderService.deleteOrderById(id);
+    }*/
 
+    @PostMapping
+    public ResponseEntity<Order> createOrder(@RequestBody OrderDTO orderRequest) {
+        Order createdOrder = orderService.createOrderWithProducts(orderRequest);
+        return new ResponseEntity<>(createdOrder, HttpStatus.CREATED);
     }
 
 }

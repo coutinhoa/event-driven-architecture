@@ -6,6 +6,7 @@ import lombok.*;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -20,7 +21,7 @@ public class Order implements Serializable {
     private Long id;
 
     @Column(name = "user_id", nullable = false)
-    private int userId;
+    private Long userId;
 
     @Column(name = "total_price", nullable = false)
     private double totalPrice;
@@ -28,8 +29,8 @@ public class Order implements Serializable {
     @Column(name = "created_timestamp", nullable = false)
     private LocalDateTime createdTimestamp;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
-    private List<Product> products;
+    private List<Product> products = new ArrayList<>();
 
 }
