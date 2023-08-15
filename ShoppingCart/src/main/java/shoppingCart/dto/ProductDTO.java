@@ -12,6 +12,7 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class ProductDTO implements Serializable {
     private Long id;
+    private Long productId;
     private int quantity;
     private Long shoppingCartId;
 }

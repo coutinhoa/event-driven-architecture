@@ -20,6 +20,8 @@ public class Product implements Serializable {
     @Column(name = "quantity", nullable = false)
     private int quantity;
 
+    @Column(name = "product_id", nullable = false)
+    private Long productId;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="order_id", nullable = false)
     private Order order;

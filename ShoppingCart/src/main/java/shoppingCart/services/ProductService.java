@@ -21,6 +21,7 @@ public class ProductService {
         List<Product> products = productRepository.findAll();
         return products.stream()
                 .map(product -> new ProductDTO(product.getId(),
+                        product.getProductId(),
                         product.getQuantity(),
                         product.getShopping_cart().getId()))
                 .collect(Collectors.toList());

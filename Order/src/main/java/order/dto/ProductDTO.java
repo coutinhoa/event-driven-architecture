@@ -13,6 +13,7 @@ import java.io.Serializable;
 public class ProductDTO implements Serializable {
     private Long id;
     private int quantity;
+    private Long productId;
     private Long orderId;
 
 }

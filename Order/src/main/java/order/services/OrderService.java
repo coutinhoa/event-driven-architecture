@@ -49,6 +49,7 @@ public class OrderService {
         for (ProductDTO productDTO : orderRequest.getProducts()) {
             Product product = new Product();
             product.setQuantity(productDTO.getQuantity());
+            product.setProductId(productDTO.getProductId());
             product.setOrder(order);
             products.add(product);
         }

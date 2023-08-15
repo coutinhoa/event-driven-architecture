@@ -32,6 +32,7 @@ public class ShoppingCartService {
         for (ProductDTO productDTO : orderRequest.getProducts()) {
             Product product = new Product();
             product.setQuantity(productDTO.getQuantity());
+            product.setProductId(productDTO.getProductId());
             product.setShopping_cart(shoppingCart);
             products.add(product);
         }

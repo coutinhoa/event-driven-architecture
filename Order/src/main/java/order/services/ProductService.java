@@ -21,7 +21,7 @@ public class ProductService {
         List<Product> products = productRepository.findAll();
         return products.stream()
                 .map(product -> new ProductDTO(product.getId(),
-                        product.getQuantity(),
+                        product.getQuantity(), product.getProductId(),
                         product.getOrder().getId()))
                 .collect(Collectors.toList());
     }
@@ -45,7 +45,7 @@ public class ProductService {
     public List<ProductDTO> getProductsByOrderId(Long orderId) {
         List<Product> products = productRepository.findByOrderId(orderId);
         return products.stream()
-                .map(product -> new ProductDTO(product.getId(), product.getQuantity(), product.getOrder().getId()))
+                .map(product -> new ProductDTO(product.getId(), product.getQuantity(), product.getProductId(), product.getOrder().getId()))
                 .collect(Collectors.toList());
     }
 
