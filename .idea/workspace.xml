@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdb63241-e43f-40f9-847c-52b8cf983d54" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Warehouse/src/main/resources/db/migration/V1_1__create_products_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Order/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/src/main/java/order/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/order/controllers/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/src/main/java/order/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/order/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/src/main/java/order/dto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/order/dto/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/src/main/java/order/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/order/dto/ProductDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/src/main/java/order/entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/order/entities/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/src/main/java/order/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/order/entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/src/main/java/order/kafka/KafkaListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/order/kafka/KafkaListeners.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/src/main/java/order/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/order/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/src/main/java/order/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/order/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/src/main/resources/db/migration/V1_1__create_order_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/resources/db/migration/V1_1__create_order_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/src/main/resources/db/migration/V1_3__create_products_table.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShoppingCart/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/controllers/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/controllers/ShoppingCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/dto/ShoppingCartCreateDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/dto/ShoppingCartDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/dto/ShoppingCartDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/entities/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/entities/ShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/kafka/KafkaTopicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/kafka/KafkaTopicConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/services/ShoppingCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/services/ShoppingCartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShoppingCart/src/main/resources/db/migration/V1_1__create_shopping_cart_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/src/main/resources/db/migration/V1_1__create_shopping_cart_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/entities/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/entities/Warehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/resources/db/migration/V1_1__create_warehouse_table.sql" beforeDir="false" />
-    </list>
+    <list default="true" id="bdb63241-e43f-40f9-847c-52b8cf983d54" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +41,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/couti/Desktop/event-driven-architecture-main/Order"
+    "last_opened_file_path": "C:/Users/couti/Desktop/event-driven-architecture-main/ShoppingCart"
   }
 }]]></component>
   <component name="RecentsManager">

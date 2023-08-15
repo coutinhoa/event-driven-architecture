@@ -1,41 +1,43 @@
 package shoppingCart.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
+import shoppingCart.dto.ProductDTO;
 import shoppingCart.dto.ShoppingCartDTO;
+import shoppingCart.entities.Product;
 import shoppingCart.entities.ShoppingCart;
 import shoppingCart.repositories.ShoppingCartRepository;
-import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class ShoppingCartService {
-    private final ShoppingCartRepository repository;
-    private final KafkaTemplate<String, ShoppingCartDTO> kafkaTemplate;
+    private final ShoppingCartRepository shoppingCartRepository;
 
     @Autowired
-    ShoppingCartService(KafkaTemplate<String, ShoppingCartDTO> kafkaTemplate, ShoppingCartRepository repository) {
-        this.kafkaTemplate = kafkaTemplate;
-        this.repository = repository;
+    ShoppingCartService(ShoppingCartRepository shoppingCartRepository) {
+        this.shoppingCartRepository = shoppingCartRepository;
     }
     public List<ShoppingCart> getAll(String name) {
-        return repository.findAll();
+        return shoppingCartRepository.findAll();
     }
 
-    //public ShoppingCartDTO createCart(ShoppingCartDTO cart){return repository.save(cart);}
+    public ShoppingCart createCartWithProducts(ShoppingCartDTO orderRequest) {
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.setTotalPrice(orderRequest.getTotalPrice());
+        shoppingCart.setUserId(orderRequest.getUserId());
 
-    public void addToShoppingCart(Long userId, Map<Long, Integer> productQuantities, double totalPrice) {
-        ShoppingCartDTO shoppingCartDTO = new ShoppingCartDTO();
-        shoppingCartDTO.setUserId(userId);
-        shoppingCartDTO.setTotalPrice(totalPrice);
-        shoppingCartDTO.setProductQuantities(productQuantities);
+        List<Product> products = new ArrayList<>();
+        for (ProductDTO productDTO : orderRequest.getProducts()) {
+            Product product = new Product();
+            product.setQuantity(productDTO.getQuantity());
+            product.setShopping_cart(shoppingCart);
+            products.add(product);
+        }
 
-        sendShoppingCartToKafka(shoppingCartDTO);
-    }
+        shoppingCart.setProducts(products);
 
-    private void sendShoppingCartToKafka(ShoppingCartDTO shoppingCartDTO) {
-        kafkaTemplate.send("shopping-cart-topic", shoppingCartDTO);
+        return shoppingCartRepository.save(shoppingCart);
     }
 }

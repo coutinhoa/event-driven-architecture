@@ -1,16 +1,18 @@
 package shoppingCart.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Map;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @ToString
 @Entity
-@Table(name = "shoppingCart")
+@Table(name = "shopping_cart")
 @NoArgsConstructor
 public class ShoppingCart implements Serializable {
 
@@ -20,17 +22,15 @@ public class ShoppingCart implements Serializable {
 
 
     @Column(name= "user_id", nullable= false)
-    @NonNull
     private Long userId;
 
-    @Column(name= "quantity", nullable= false)
-    private int quantity;
+    @Column(name = "total_price")
+    private double totalPrice;
 
-    @ElementCollection
-    @MapKeyColumn(name = "product_id")
-    @Column(name = "quantity")
-    private Map<Long, Integer> productQuantities = new HashMap<>(); // Product ID to quantity mapping
+    @Column(name = "created_timestamp", nullable = false)
+    private LocalDateTime createdTimestamp;
 
-
-
+    @OneToMany(mappedBy = "shopping_cart", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
+    private List<Product> products = new ArrayList<>();
 }

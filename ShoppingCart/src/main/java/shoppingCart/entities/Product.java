@@ -1,7 +1,10 @@
-package order.entities;
+package shoppingCart.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.io.Serializable;
 
@@ -21,6 +24,6 @@ public class Product implements Serializable {
     private int quantity;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="order_id", nullable = false)
-    private Order order;
+    @JoinColumn(name="shopping_cart_id", nullable = false)
+    private ShoppingCart shopping_cart;
 }

@@ -15,9 +15,11 @@ import org.springframework.stereotype.Component;
 @Transactional
 public class KafkaListeners {
     private final OrderService orderService;
+    private final ObjectMapper objectMapper;
 
-    public KafkaListeners(OrderService service ) {
+    public KafkaListeners(OrderService service, ObjectMapper objectMapper) {
         this.orderService = service;
+        this.objectMapper = objectMapper;
     }
 
     @KafkaListener(topics = "user-deleted", groupId = "foo")
@@ -25,5 +27,15 @@ public class KafkaListeners {
         var userId = Long.parseLong(data);
         System.out.println(("Listener received id:" + userId));
         orderService.deleteOrder(userId);
+    }
+
+    @KafkaListener(topics = "shopping-cart-topic", groupId = "foo1")
+    void listenerShoppingCart(String jsonData) throws JsonProcessingException {
+        log.info("Message received");
+        log.info(jsonData);
+        OrderDTO order = objectMapper.readValue(jsonData, OrderDTO.class);
+        System.out.println("Listener received object");
+        System.out.println(order);
+        orderService.createOrderWithProducts(order);
     }
 }
