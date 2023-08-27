@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdb63241-e43f-40f9-847c-52b8cf983d54" name="Changes" comment="" />
+    <list default="true" id="bdb63241-e43f-40f9-847c-52b8cf983d54" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order/src/main/java/order/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/order/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/dto/ProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf.d/my_conf.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf.d/my_conf.conf" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,13 +47,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/couti/Desktop/event-driven-architecture-main/ShoppingCart"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/couti/Desktop/grpc&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\couti\Desktop\kafka-project\src\main\resources\db\migration" />

@@ -9,7 +9,7 @@ import java.io.Serializable;
 @RequiredArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class WarehouseDto implements Serializable {
+public class ProductDto implements Serializable {
 
     private Long id;
 
@@ -17,6 +17,6 @@ public class WarehouseDto implements Serializable {
     private String name;
 
     private double price;
-    private int warehouseQuantity;
+    private int availableQuantity;
 
 }

@@ -1,8 +1,8 @@
 package warehouse.controllers;
 
 import jakarta.transaction.Transactional;
-import warehouse.entities.Warehouse;
-import warehouse.services.WarehouseService;
+import warehouse.entities.Product;
+import warehouse.services.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
@@ -15,24 +15,24 @@ import java.util.List;
 @Transactional
 @RequestMapping("/warehouse")
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST})
-public class WarehouseController {
+public class ProductController {
 
-    private final WarehouseService warehouseService;
-    WarehouseController(WarehouseService productService) {
-        this.warehouseService = productService;
+    private final ProductService productService;
+    ProductController(ProductService productService) {
+        this.productService = productService;
     }
 
     @GetMapping
-    public ResponseEntity<Page<Warehouse>> getProducts(
+    public ResponseEntity<Page<Product>> getProducts(
             @RequestParam(name = "name", required = false, defaultValue = "") String name,
             @RequestParam (defaultValue="1") int page, @RequestParam(defaultValue = "10") int pageSize) {
-        Page<Warehouse> products = warehouseService.getAll(name, page, pageSize);
+        Page<Product> products = productService.getAll(name, page, pageSize);
         return ResponseEntity.ok(products);
     }
 
     @GetMapping("/availability")
-    public ResponseEntity<List<Warehouse>> getAvailableProductsInWarehouse() {
-        List<Warehouse> products = warehouseService.getAvailableProducts();
+    public ResponseEntity<List<Product>> getAvailableProductsInWarehouse() {
+        List<Product> products = productService.getAvailableProducts();
         return ResponseEntity.ok(products);
     }
 

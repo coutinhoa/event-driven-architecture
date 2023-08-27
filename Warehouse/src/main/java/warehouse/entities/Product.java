@@ -1,18 +1,16 @@
 package warehouse.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
-import java.util.List;
 
 @Data
 @ToString
 @Entity
 @Table(name = "products")
 @NoArgsConstructor
-public class Warehouse implements Serializable {
+public class Product implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

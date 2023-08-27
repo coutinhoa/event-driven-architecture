@@ -30,18 +30,6 @@ public class ProductService {
         return productRepository.findByOrderId(id);
     }
 
-    /*public Product createOrder(Product product) {
-        System.out.println("saved product");
-        if(repository.findById(product.getId()).isPresent()){
-            throw new Exception ("Product already exists");
-        }
-        return productRepository.save(product);
-    }*/
-
-    /*public Product createProduct(Product product) {
-        return productRepository.save(product);
-    }*/
-
     public List<ProductDTO> getProductsByOrderId(Long orderId) {
         List<Product> products = productRepository.findByOrderId(orderId);
         return products.stream()

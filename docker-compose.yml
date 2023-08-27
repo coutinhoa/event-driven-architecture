@@ -1,34 +1,34 @@
 version: '3'
 
 services:
-  user-postgresql:
-    image: 'bitnami/postgresql:15.3.0'
-    ports:
-      - 15432:5432
-    environment:
-      - POSTGRESQL_USERNAME=user
-      - POSTGRESQL_PASSWORD=very-secure-password
-      - POSTGRESQL_DATABASE=user_db
-
-
-  order-postgresql:
-    image: 'bitnami/postgresql:15.3.0'
-    ports:
-      - 25432:5432
-    environment:
-      - POSTGRESQL_USERNAME=user
-      - POSTGRESQL_PASSWORD=very-secure-password
-      - POSTGRESQL_DATABASE=order_db
-
-
-  shopping-cart-postgresql:
-    image: 'bitnami/postgresql:15.3.0'
-    ports:
-      - 35432:5432
-    environment:
-      - POSTGRESQL_USERNAME=user
-      - POSTGRESQL_PASSWORD=very-secure-password
-      - POSTGRESQL_DATABASE=shopping_cart_db
+#  user-postgresql:
+#    image: 'bitnami/postgresql:15.3.0'
+#    ports:
+#      - 15432:5432
+#    environment:
+#      - POSTGRESQL_USERNAME=user
+#      - POSTGRESQL_PASSWORD=very-secure-password
+#      - POSTGRESQL_DATABASE=user_db
+#
+#
+#  order-postgresql:
+#    image: 'bitnami/postgresql:15.3.0'
+#    ports:
+#      - 25432:5432
+#    environment:
+#      - POSTGRESQL_USERNAME=user
+#      - POSTGRESQL_PASSWORD=very-secure-password
+#      - POSTGRESQL_DATABASE=order_db
+#
+#
+#  shopping-cart-postgresql:
+#    image: 'bitnami/postgresql:15.3.0'
+#    ports:
+#      - 35432:5432
+#    environment:
+#      - POSTGRESQL_USERNAME=user
+#      - POSTGRESQL_PASSWORD=very-secure-password
+#      - POSTGRESQL_DATABASE=shopping_cart_db
 
   warehouse-postgresql:
     image: 'bitnami/postgresql:15.3.0'
@@ -62,12 +62,15 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
-  manager:
-    image: sheepkiller/kafka-manager
-    ports:
-      - 9000:9000
-    environment:
-      ZK_HOSTS: zookeeper:2181
+
+  product-quantity:
+    build:
+      context: ./ProductQuantityService/
+#    build:
+#      context: ..
+#      dockerfile: ./HelloDockerWeb/Dockerfile
     depends_on:
-      - zookeeper
+      - warehouse-postgresql
+    ports:
+      - 4300:80
 

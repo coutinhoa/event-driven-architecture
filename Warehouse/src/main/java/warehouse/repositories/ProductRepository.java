@@ -1,6 +1,6 @@
 package warehouse.repositories;
 
-import warehouse.entities.Warehouse;
+import warehouse.entities.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -9,11 +9,11 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 
-public interface WarehouseRepository extends JpaRepository<Warehouse, Long> {
+public interface ProductRepository extends JpaRepository<Product, Long> {
 
     @Query(
             """
-            SELECT p FROM Warehouse p ORDER BY (
+            SELECT p FROM Product p ORDER BY (
             case when p.name= 'Apple' THEN 1
             when p.name= 'Orange' THEN 2
             when p.name= 'Chocolate' THEN 3
@@ -31,8 +31,8 @@ public interface WarehouseRepository extends JpaRepository<Warehouse, Long> {
             else 15 end) 
             """
     )
-    Page<Warehouse> findProducts(Pageable pageable);
+    Page<Product> findProducts(Pageable pageable);
 
-    @Query("SELECT p FROM Warehouse p WHERE p.availableQuantity>0 ORDER BY p.availableQuantity ASC")
-    List<Warehouse> findAvailableProducts();
+    @Query("SELECT p FROM Product p WHERE p.availableQuantity>0 ORDER BY p.availableQuantity ASC")
+    List<Product> findAvailableProducts();
 }
