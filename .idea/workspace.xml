@@ -5,15 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdb63241-e43f-40f9-847c-52b8cf983d54" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/src/main/java/order/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/order/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/dto/ProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/repositories/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/warehouse/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf.d/my_conf.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf.d/my_conf.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/FileContentIndex/30456c29-991a-4755-a392-030318910096.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/FileContentIndex/537c2977-bbd4-4856-990a-fa0563fa85fc.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/FileContentIndex/8562fa63-616e-4aea-adb7-008839e4853d.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/Helpers/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/Helpers/DataContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/Models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/Models/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/ProductQuantityService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/ProductQuantityService.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/Services/ProductQuantityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/Services/ProductQuantityService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/bin/Debug/net7.0/ProductQuantityService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/bin/Debug/net7.0/ProductQuantityService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/bin/Debug/net7.0/ProductQuantityService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/bin/Debug/net7.0/ProductQuantityService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/bin/Debug/net7.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/bin/Debug/net7.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/12fbc7ffe642ca7e_greet.protodep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/ProductQuantityService.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/ProductQuantityService.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/ProductQuantityService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/ProductQuantityService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/ProductQuantityService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/ProductQuantityService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/ref/ProductQuantityService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/ref/ProductQuantityService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/refint/ProductQuantityService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/refint/ProductQuantityService.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,13 +58,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/couti/Desktop/grpc&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/couti/Desktop/event-driven-architecture-main/Warehouse"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\couti\Desktop\kafka-project\src\main\resources\db\migration" />

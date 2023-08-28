@@ -1,11 +1,20 @@
-﻿namespace ProductQuantityService.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ProductQuantityService.Models
 {
+    [Table("products")]
     public class Product
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-            
-        public decimal Price { get; set; }
+        [Column("id")]
+        public int Id { get; set; }
+
+        [Column("name")]
+        public string? Name { get; set; }
+
+        [Column("price")]
+        public double Price { get; set; }
+
+        [Column("available_quantity")]
+        public int AvailableQuantity { get; set; }
     }
 }
