@@ -1,6 +1,7 @@
 package shoppingCart.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import shoppingCart.dto.ProductDTO;
 import shoppingCart.dto.ShoppingCartDTO;
@@ -14,11 +15,18 @@ import java.util.List;
 @Service
 public class ShoppingCartService {
     private final ShoppingCartRepository shoppingCartRepository;
+    private final KafkaTemplate<String, ShoppingCart> kafkaTemplate;
+    private final ProductQuantityService productQuantityService;
 
     @Autowired
-    ShoppingCartService(ShoppingCartRepository shoppingCartRepository) {
+    ShoppingCartService(KafkaTemplate<String, ShoppingCart> kafkaTemplate,
+                        ShoppingCartRepository shoppingCartRepository,
+                        ProductQuantityService productQuantityService) {
+        this.kafkaTemplate = kafkaTemplate;
         this.shoppingCartRepository = shoppingCartRepository;
+        this.productQuantityService = productQuantityService;
     }
+
     public List<ShoppingCart> getAll(String name) {
         return shoppingCartRepository.findAll();
     }
@@ -35,9 +43,14 @@ public class ShoppingCartService {
             product.setProductId(productDTO.getProductId());
             product.setShopping_cart(shoppingCart);
             products.add(product);
+            //create a grpc client that does a request like in postman
+            //if product quantity is not enough don't save and send an error, else create cart and order
+            productQuantityService.getProductQuantity(Math.toIntExact(productDTO.getProductId()));
         }
 
         shoppingCart.setProducts(products);
+
+        kafkaTemplate.send("shopping-cart-topic", shoppingCart);
 
         return shoppingCartRepository.save(shoppingCart);
     }

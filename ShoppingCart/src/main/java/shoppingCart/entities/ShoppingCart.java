@@ -2,7 +2,9 @@ package shoppingCart.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -21,13 +23,13 @@ public class ShoppingCart implements Serializable {
     private Long id;
 
 
-    @Column(name= "user_id", nullable= false)
+    @Column(name = "user_id", nullable = false)
     private Long userId;
 
     @Column(name = "total_price")
     private double totalPrice;
 
-    @Column(name = "created_timestamp", nullable = false)
+    @Column(name = "created_timestamp", nullable = true)
     private LocalDateTime createdTimestamp;
 
     @OneToMany(mappedBy = "shopping_cart", cascade = CascadeType.ALL, orphanRemoval = true)

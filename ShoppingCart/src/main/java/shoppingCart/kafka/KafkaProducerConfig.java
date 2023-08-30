@@ -1,4 +1,4 @@
-package shoppingCart.kafka;;
+package shoppingCart.kafka;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -9,7 +9,6 @@ import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.support.serializer.JsonSerializer;
-import shoppingCart.dto.ShoppingCartDTO;
 import shoppingCart.entities.ShoppingCart;
 
 import java.util.HashMap;
@@ -32,14 +31,14 @@ public class KafkaProducerConfig {
 
     //factory is responsible for creating producer instances
     @Bean
-    public ProducerFactory<String, ShoppingCartDTO> producerFactory() {
+    public ProducerFactory<String, ShoppingCart> producerFactory() {
         return new DefaultKafkaProducerFactory<>(producerConfig());
     }
 
     //sends messages
     @Bean
-    public KafkaTemplate<String, ShoppingCartDTO> kafkaTemplate(
-            ProducerFactory<String, ShoppingCartDTO> producerFactory) {
+    public KafkaTemplate<String, ShoppingCart> kafkaTemplate(
+            ProducerFactory<String, ShoppingCart> producerFactory) {
         return new KafkaTemplate<>(producerFactory);
     }
 }

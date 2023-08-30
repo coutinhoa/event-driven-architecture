@@ -1,15 +1,13 @@
 package shoppingCart.controllers;
 
 import jakarta.transaction.Transactional;
-import org.springframework.http.HttpStatus;
-import org.springframework.kafka.core.KafkaTemplate;
-import shoppingCart.dto.ShoppingCartDTO;
-import shoppingCart.entities.ShoppingCart;
-import shoppingCart.repositories.ShoppingCartRepository;
-import shoppingCart.services.ShoppingCartService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import shoppingCart.dto.ShoppingCartDTO;
+import shoppingCart.entities.ShoppingCart;
+import shoppingCart.services.ShoppingCartService;
 
 import java.util.List;
 
@@ -20,10 +18,8 @@ import java.util.List;
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST})
 public class ShoppingCartController {
     private final ShoppingCartService shoppingCartService;
-    private final KafkaTemplate<String, ShoppingCartDTO> kafkaTemplate;
 
-    ShoppingCartController(KafkaTemplate<String, ShoppingCartDTO> kafkaTemplate, ShoppingCartService shoppingCartService) {
-        this.kafkaTemplate = kafkaTemplate;
+    ShoppingCartController(ShoppingCartService shoppingCartService) {
         this.shoppingCartService = shoppingCartService;
     }
 
@@ -34,10 +30,9 @@ public class ShoppingCartController {
         return ResponseEntity.ok(shoppingCart);
     }
 
-    @PostMapping
-    public ResponseEntity<ShoppingCart> createCart(@RequestBody ShoppingCartDTO shoppingCart) {
+    @PostMapping("/purchase")
+    public ResponseEntity<ShoppingCart> makePurchase(@RequestBody ShoppingCartDTO shoppingCart) {
         ShoppingCart createdCart = shoppingCartService.createCartWithProducts(shoppingCart);
-        kafkaTemplate.send("shopping-cart-topic", shoppingCart);
         return new ResponseEntity<>(createdCart, HttpStatus.CREATED);
     }
 
