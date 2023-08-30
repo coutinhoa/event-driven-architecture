@@ -43,9 +43,10 @@ public class ShoppingCartService {
             product.setProductId(productDTO.getProductId());
             product.setShopping_cart(shoppingCart);
             products.add(product);
-            //create a grpc client that does a request like in postman
+            //creates a grpc client that does a request like in postman
             //if product quantity is not enough don't save and send an error, else create cart and order
-            productQuantityService.getProductQuantity(Math.toIntExact(productDTO.getProductId()));
+           int availableQuantity= productQuantityService.getProductQuantity(Math.toIntExact(productDTO.getProductId()));
+            if(availableQuantity<)
         }
 
         shoppingCart.setProducts(products);

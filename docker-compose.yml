@@ -71,5 +71,5 @@ services:
     ports:
       - 5164:80
     environment:
-      - DATABASE_URL= postgresql://postgres:alice@warehouse-postgresql:5432/warehouse_db
+      ASPNETCORE_ENVIRONMENT: Production
 

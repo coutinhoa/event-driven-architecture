@@ -1,14 +1,12 @@
+using Microsoft.Extensions.Configuration;
 using ProductQuantityService.Helpers;
 using ProductQuantityService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("WebApiDatabase");
 
-// Additional configuration is required to successfully run gRPC on macOS.
-// For instructions on how to configure Kestrel and gRPC clients on macOS, visit https://go.microsoft.com/fwlink/?linkid=2099682
-
-// Add services to the container.
 builder.Services.AddGrpc();
-builder.Services.AddNpgsql<DataContext>("Host=localhost; Port=45432;Database=warehouse_db; Username=user; Password=very-secure-password");
+builder.Services.AddNpgsql<DataContext>(connectionString);
 
 var app = builder.Build();
 

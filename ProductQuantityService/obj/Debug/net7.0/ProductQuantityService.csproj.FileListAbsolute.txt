@@ -81,3 +81,4 @@ C:\Users\couti\Desktop\event-driven-architecture-main\ProductQuantityService\obj
 C:\Users\couti\Desktop\event-driven-architecture-main\ProductQuantityService\obj\Debug\net7.0\ProductQuantityService.pdb
 C:\Users\couti\Desktop\event-driven-architecture-main\ProductQuantityService\obj\Debug\net7.0\ProductQuantityService.genruntimeconfig.cache
 C:\Users\couti\Desktop\event-driven-architecture-main\ProductQuantityService\obj\Debug\net7.0\ref\ProductQuantityService.dll
+C:\Users\couti\Desktop\event-driven-architecture-main\ProductQuantityService\bin\Debug\net7.0\appsettings.Production.json

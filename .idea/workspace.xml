@@ -5,33 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdb63241-e43f-40f9-847c-52b8cf983d54" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/Warehouse.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Order/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Order/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/FileContentIndex/d87c25ba-4dd9-427f-9c65-46d4b7830bde.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/FileContentIndex/6beaad8f-546f-4b35-a767-58f34420899d.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/FileContentIndex/b764d93d-84d8-4fab-9100-239c48b88efc.vsidx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/.vs/ProductQuantityService/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductQuantityService/.vs/ProjectEvaluation/productquantityservice.metadata.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/.vs/ProjectEvaluation/productquantityservice.metadata.v7.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductQuantityService/.vs/ProjectEvaluation/productquantityservice.projects.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/.vs/ProjectEvaluation/productquantityservice.projects.v7.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShoppingCart/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShoppingCart/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/controllers/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/controllers/ShoppingCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/entities/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/entities/ShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/kafka/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/kafka/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/bin/Debug/net7.0/ProductQuantityService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/bin/Debug/net7.0/ProductQuantityService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/bin/Debug/net7.0/ProductQuantityService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/bin/Debug/net7.0/ProductQuantityService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/bin/Debug/net7.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/bin/Debug/net7.0/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/bin/Debug/net7.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/bin/Debug/net7.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/ProductQuantityService.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/ProductQuantityService.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/ProductQuantityService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/ProductQuantityService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/ProductQuantityService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ProductQuantityService/obj/Debug/net7.0/ProductQuantityService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShoppingCart/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShoppingCart/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/services/ShoppingCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/services/ShoppingCartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShoppingCart/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ShoppingCart/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/User/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/User/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +96,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "code.cleanup.on.save": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "C:/Users/couti/Desktop/event-driven-architecture-outbox-debezium",
+    "last_opened_file_path": "C:/Users/couti/Desktop/event-driven-architecture-main",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -113,11 +106,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\couti\Desktop\event-driven-architecture-main" />
       <recent name="C:\Users\couti\Desktop\event-driven-architecture-main\ShoppingCart\src\main\java\shoppingCart" />
       <recent name="C:\Users\couti\Desktop\event-driven-architecture-main\ShoppingCart" />
       <recent name="C:\Users\couti\Desktop\event-driven-architecture-main\User" />
       <recent name="C:\Users\couti\Desktop\kafka-project\src\main\resources\db\migration" />
-      <recent name="C:\Users\couti\Desktop\kafka-project\src\main\java\kafka\dto" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\couti\Desktop\event-driven-architecture-main\ShoppingCart\src\main" />
@@ -211,16 +204,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ShoppingCart/src/main/java/shoppingCart/services/ProductQuantityService.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
