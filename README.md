@@ -6,15 +6,12 @@ warehouse.
 The microservices are Shopping Cart, Order, User and Warehouse.
 
 1. When a user makes a purchase, the shopping cart service communicates with the warehouse service, using gRPC, in order
-   to understand if there are enough items available. If there are enough items in the warehouse the purchase will go
-   through and the available items in the warehouse will be reduced. Otherwise, the user will get an error.
-2. When a purchase is finalized an order is created through a kafka event.
-3. The order service communicates with the warehouse (using gRPC) in order to know the price of each purchased item and
-   calculates the total.
+   to understand if there are enough items available and the price of the items to calculate the total. If there aren't enough items in the warehouse the user will get an error.
+2. Otherwise the purchase is finalized an order is created through a kafka event.
+3. The warehouse is listening to the shopinng cart topic and in case an order is created the available items are going to be updated.
 4. When a user is deleted, the orders of that user will also be deleted through a kafka event.
 
 <img width="659" alt="event-driven-architecture" src="https://github.com/coutinhoa/event-driven-architecture/assets/104270514/fe60f56f-334f-4e3d-a7dc-965a3bc11857">
-
 
 **Usage**
 
@@ -23,21 +20,21 @@ The microservices are Shopping Cart, Order, User and Warehouse.
 3. Open a terminal in the kafka-project folder and run docker with the follwoing command: docker-compose up --build
 4. Endpoints:
 
-    POST (makes a purchase and creates an order) -> http://localhost:8081/api/v1/shopping-cart/purchase
+   POST (makes a purchase and creates an order) -> http://localhost:8081/api/v1/shopping-cart/purchase
 
-    DELETE (deletes a user and the orders of that user) -> http://localhost:8082/api/v1/users/{id}
+   DELETE (deletes a user and the orders of that user) -> http://localhost:8082/api/v1/users/{id}
 
-    GET (gets all orders) -> http://localhost:8083/api/v1/orders
+   GET (gets all orders) -> http://localhost:8083/api/v1/orders
 
-    GET (gets the products of a certain order) -> http://localhost:8083/api/v1/product/order/{orderId}
+   GET (gets the products of a certain order) -> http://localhost:8083/api/v1/product/order/{orderId}
 
-    GET (it's pageable, give the page(1 or 2) and pageSize(default is 10)) -> http://localhost:8084/api/v1/warehouse
+   GET (it's pageable, give the page(1 or 2) and pageSize(default is 10)) -> http://localhost:8084/api/v1/warehouse
 
 5. gRPC endpoints: grpc://localhost:5164 (on select method use the proto file)
 6. Delete a user and check that the orders of that user were deleted.
 7. Make a purchase with the following json and verify that a new order and respective products have been created:
 
-`   {"totalPrice": 60.0,
+`  {"totalPrice": 60.0,
 "userId": 3,
 "createdTimestamp":"2023-08-25T15:34:07Z",
 "products": [
@@ -49,4 +46,4 @@ The microservices are Shopping Cart, Order, User and Warehouse.
 "quantity": 7
 }
 ]
-} `
+}`
